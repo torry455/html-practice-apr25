@@ -1,1 +1,120 @@
+$text-color: #2F4F4F;
+$number-color: #8B0000;
+$bg-color: #FFFFFF;
+$bg-hover: #EEEEEE;
 
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  gap: 30px;
+  margin: 30px 35px;
+
+
+}
+
+.person {
+
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+  padding: 0;
+  
+
+  &:hover {
+    background-color: $bg-hover;
+    transform: scale(1.03);
+  }
+
+  
+  &__photo--wrapper {
+    width: 200px;
+
+    position: relative;
+
+  }
+
+  &__photo {
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  &__rank {
+    position: absolute;
+    right: 10px;
+    top: 84px;
+    color: $number-color;
+    background-color: $bg-color;
+    border-radius: 50%;
+    padding: 7px 12px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__name {
+    color: $text-color;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__details {
+    width: 200px;
+  }
+}
+
+@media (min-width: 750px) {
+
+  .person {
+  justify-self: center;
+
+  }
+  
+}
+
+@media (min-width: 750px) {
+
+  .people {
+    margin: 30px 160px;
+  }
+
+  .person {
+    width: 200px;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+
+  .people {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    margin: 30px 55px;
+  }
+
+  .person {
+    width: 200px;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+
+  .people {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    margin: 30px 305px;
+  }
+
+  .person {
+    width: 200px;
+  }
+  
+}
