@@ -15,13 +15,25 @@ body {
 .person {
   text-align: center;
   width: 200px;
-  padding: 0;
-  transition: all .3s;
+  position: relative;
 }
 
-.person:hover {
+.person__inner {
+  transform-origin: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  transition: background-color .3s, border-radius .3s, padding .3s;
+  display: flex;
+}
+
+.person__inner:hover {
+  z-index: 10;
   background-color: #eee;
-  transform: scale(1.03);
+  border-radius: 12px;
+  align-items: center;
+  width: 220px;
+  transform: scale(1.1);
 }
 
 .person__photo--wrapper {
@@ -32,6 +44,11 @@ body {
 .person__photo {
   border-radius: 50%;
   width: 200px;
+  transition: border-radius 1s;
+}
+
+.person__photo:hover {
+  border-radius: 60px;
 }
 
 .person__rank {
